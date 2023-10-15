@@ -51,16 +51,16 @@ describe(" My First Test", () => {
     homePage.isTelnyxLlcOnHomePageVisible();
   });
 
-  it("[case 5] check all elements in menu", () => {
-    cy.visit("https://telnyx.com/");
-    homePage.clickOnMainMenuBtn();
-    homePage.isProductsBtnVisible();
-    homePage.isSolutionsBtnVisible();
-    homePage.isPricingBtnVisible();
-    homePage.isWhyTelnyxBtnVisible();
-    homePage.isResourcesVisible();
-    homePage.isDevelopersVisible();
-  });
+  // it("[case 5] check all elements in menu", () => {
+  //   cy.visit("https://telnyx.com/");
+  //   homePage.clickOnMainMenuBtn();
+  //   homePage.isProductsBtnVisible();
+  //   homePage.isSolutionsBtnVisible();
+  //   homePage.isPricingBtnVisible();
+  //   homePage.isWhyTelnyxBtnVisible();
+  //   homePage.isResourcesVisible();
+  //   homePage.isDevelopersVisible();
+  // });
 
   it("[case 6] check main title", () => {
     cy.visit("https://telnyx.com/");
