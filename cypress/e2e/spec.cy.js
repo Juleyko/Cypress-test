@@ -47,10 +47,9 @@ describe(" My First Test", () => {
     homePage.isTelnyxLlcOnHomePageVisible();
   });
 
-  it("[case 5] check all elements in menu", () => {
+  it("[case 5] check all drop-down elements in menu", () => {
     homePage.clickOnMainMenuBtn();
     homePage.isProductsBtnVisible();
-    homePage.isSolutionsBtnVisible();
     homePage.isPricingBtnVisible();
     homePage.isWhyTelnyxBtnVisible();
     homePage.isResourcesVisible();

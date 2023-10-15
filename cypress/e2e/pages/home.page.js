@@ -13,7 +13,6 @@ class HomePage {
     linksInFooter: () => cy.get("ul.c-bznZTK"),
     mediaItemsInFooter: () => cy.get("ul.c-cLfYON"),
     telnyxLlcOnHomePage: () => cy.contains("© Telnyx LLC 2023"),
-    solutionsBtn: () => cy.get(".c-ewUecD.c-bRSUfv.mchNoDecorate"),
     pricingBtn: () => cy.get("#radix-\\:R1bd63m\\: > span > span"),
     whyTelnyxBtn: () => cy.get("#radix-\\:R1cd63m\\: > span > span"),
     resourcesBtn: () => cy.get("#radix-\\:R1dd63m\\: > span > span"),
@@ -68,9 +67,6 @@ class HomePage {
 
   isProductsBtnVisible() {
     this.elements.productsBtn().should("be.visible");
-  }
-  isSolutionsBtnVisible() {
-    this.elements.solutionsBtn().should("be.visible");
   }
   isPricingBtnVisible() {
     this.elements.pricingBtn().should("be.visible");
