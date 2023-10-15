@@ -20,6 +20,9 @@ class HomePage {
     developersBtn: () => cy.get("#radix-\\:R1ed63m\\: > span"),
     contactUsBtn: () => cy.contains("Contact us"),
     mainTitle: () => cy.get("h1"),
+    seeProductsBtn: () => cy.contains("SEE PRODUCTS"),
+    createFreeAccountBtn: () => cy.contains("CREATE A FREE ACCOUNT"),
+    learnAboutEdgeBtn: () => cy.contains("LEARN ABOUT THE EDGE"),
     massagingApiBtn: () => cy.get("#6XXyLeKQp0xVXRwyPX85OR"),
     smsApiBtn: () => cy.get("#5WvVlHUdpwqOMqyPAjErma"),
     overviewBtn: () => cy.get("#62InsTAZ5l0bTLXJn6nMKs"),
@@ -113,6 +116,15 @@ class HomePage {
   }
   clickOnCustomerStories() {
     this.elements.customerStories().click();
+  }
+  isSeeProductsBtnVisible() {
+    this.elements.seeProductsBtn().should("be.visible");
+  }
+  isCreateFreeAccountBtnVisible() {
+    this.elements.createFreeAccountBtn().should("be.visible");
+  }
+  isLearnAboutEdgeBtnVisible() {
+    this.elements.learnAboutEdgeBtn().should("be.visible");
   }
 }
 

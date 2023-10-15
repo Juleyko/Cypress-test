@@ -59,6 +59,9 @@ describe(" My First Test", () => {
 
   it("[case 6] check main title", () => {
     homePage.checkMainTitle();
+    homePage.isSeeProductsBtnVisible();
+    homePage.isCreateFreeAccountBtnVisible();
+    homePage.isLearnAboutEdgeBtnVisible();
   });
   it("[case 7] check FAQ in Pricing", () => {
     homePage.clickOnMainMenuBtn();
