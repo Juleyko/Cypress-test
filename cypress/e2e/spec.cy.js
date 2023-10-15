@@ -14,19 +14,17 @@ Cypress.on("window:before:load", (window) => {
 });
 
 describe(" My First Test", () => {
-  before(() => {
+  beforeEach(() => {
     cy.visit("https://telnyx.com/");
     cy.on("window:alert", (text) => {});
     cy.viewport(1408, 1152);
   });
   it("[case 1] Visit the Telnyx", () => {
-    cy.visit("https://telnyx.com/");
     cy.request("https://telnyx.com/").its("status").should("eq", 200);
     homePage.isMainLogoVisible();
   });
 
   it("[case 2] sign up", () => {
-    cy.visit("https://telnyx.com/");
     homePage.clickOnSignUpBtn();
     signUpPage.clickOnEmailFieldAndFill();
     signUpPage.clickOnFirstNameFieldAndFill();
@@ -37,37 +35,32 @@ describe(" My First Test", () => {
   });
 
   it("[case 3] select product from menu", () => {
-    cy.visit("https://telnyx.com/");
     homePage.clickOnMainMenuBtn();
     homePage.clickOnProductBtn();
     homePage.clickOnSeeAllProductsBtn();
   });
 
   it("[case 4] check all elements in footer", () => {
-    cy.visit("https://telnyx.com/");
     homePage.scrollToFooter();
     homePage.isLinksInFooterVisible();
-    homePage.isMediaItemsInFooterVisible();
+    homePage.isMediaIconsInFooterVisible();
     homePage.isTelnyxLlcOnHomePageVisible();
   });
 
-  // it("[case 5] check all elements in menu", () => {
-  //   cy.visit("https://telnyx.com/");
-  //   homePage.clickOnMainMenuBtn();
-  //   homePage.isProductsBtnVisible();
-  //   homePage.isSolutionsBtnVisible();
-  //   homePage.isPricingBtnVisible();
-  //   homePage.isWhyTelnyxBtnVisible();
-  //   homePage.isResourcesVisible();
-  //   homePage.isDevelopersVisible();
-  // });
+  it("[case 5] check all elements in menu", () => {
+    homePage.clickOnMainMenuBtn();
+    homePage.isProductsBtnVisible();
+    homePage.isSolutionsBtnVisible();
+    homePage.isPricingBtnVisible();
+    homePage.isWhyTelnyxBtnVisible();
+    homePage.isResourcesVisible();
+    homePage.isDevelopersVisible();
+  });
 
   it("[case 6] check main title", () => {
-    cy.visit("https://telnyx.com/");
     homePage.checkMainTitle();
   });
   it("[case 7] check FAQ in Pricing", () => {
-    cy.visit("https://telnyx.com/");
     homePage.clickOnMainMenuBtn();
     homePage.clickOnPricingBtn();
     homePage.clickOnMassagingApiBtn();
@@ -75,7 +68,6 @@ describe(" My First Test", () => {
     pricingMassagingPage.isFaqsBtnsVisible();
   });
   it("[case 8] check How it works in Products", () => {
-    cy.visit("https://telnyx.com/");
     homePage.clickOnMainMenuBtn();
     homePage.clickOnProductBtn();
     homePage.clickOnSmsApiBtn();
@@ -84,7 +76,6 @@ describe(" My First Test", () => {
     productsSmsApiPage.isTalkToAnExpertBtnVisible();
   });
   it("[case 9] check titles in Why Telnyx", () => {
-    cy.visit("https://telnyx.com/");
     homePage.clickOnMainMenuBtn();
     homePage.clickOnWhyTelnyxBtn();
     homePage.clickOnOverviewBtn();
@@ -94,7 +85,6 @@ describe(" My First Test", () => {
     whyTelnyxPage.isTheSecoundH2TitleVisible();
   });
   it("[case 10] check customer-stories", () => {
-    cy.visit("https://telnyx.com/");
     homePage.clickOnMainMenuBtn();
     homePage.clickOnResourcesBtn();
     homePage.clickOnCustomerStories();

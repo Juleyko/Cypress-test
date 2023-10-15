@@ -53,7 +53,7 @@ class HomePage {
   isLinksInFooterVisible() {
     this.elements.linksInFooter().find("li.c-PJLV").should("have.length.gt", 0);
   }
-  isMediaItemsInFooterVisible() {
+  isMediaIconsInFooterVisible() {
     this.elements
       .mediaItemsInFooter()
       .find("li.c-PJLV")
